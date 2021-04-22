@@ -5,7 +5,7 @@ PROGS = echo_cli01 echo_serv01 tcpserv02 tcpserv03 tcpcli04
 all: ${PROGS}
 
 echo_cli01: echo_cli01.o str_cli.o
-	${CC} ${CFLAGS} -o $@ echo_cli01.o ${LIBS}
+	${CC} ${CFLAGS} -o $@ echo_cli01.o str_cli.o ${LIBS}
 
 echo_serv01: echo_serv01.o
 	${CC} ${CFLAGS} -o $@ echo_serv01.o ${LIBS}
